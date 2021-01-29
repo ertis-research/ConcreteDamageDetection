@@ -1,8 +1,8 @@
 """
     Basic Tests
 """
-from CLI import examples
-from CLI.object_detection import inference
+from cli import examples
+from object_detection import inference
 
 
 def test_1():

@@ -1,2 +1,4 @@
-torch
-pytest
+torch==1.7.1
+pytest==6.2.2
+click==7.1.2
+python-dotenv==0.15.0
