@@ -9,9 +9,11 @@ import subprocess
 
 import click
 from dotenv import load_dotenv
-from object_detection import inference
-from models.YOLOv3.detect import detect
-from models.YOLOv3.train import train
+from ..models.yolov3.detect import detect
+# from yolov3.train import train
+
+from object_detection import inference, train
+from cli.examples import hello
 
 load_dotenv(dotenv_path=".env")
 
@@ -53,5 +55,6 @@ def desync(ctx):
     x = inference.inference()
     click.echo(x)
     click.echo(os.getenv('TEST'))
+    click.echo( hello() )
     detect()
-    train()
+    # train()
