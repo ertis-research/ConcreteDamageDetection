@@ -6,11 +6,11 @@ VSCODE_BIN = /home/vscode/.local/bin
 RUN_TEST = python -m pytest -v
 
 install:
-	pip install --editable .
+	pip install --editable $(PACKAGE_NAME)
 
 uninstall:
-	pip uninstall $(PACKAGE_NAME)
-	rm -dfr $(PACKAGE_NAME).egg*
+	pip uninstall -y $(PACKAGE_NAME)
+	rm -dfr $(PACKAGE_NAME)/*.egg*
 	rm $(VSCODE_BIN)/concrete
 
 test: $(MYDIR)/tests/test_*.py
