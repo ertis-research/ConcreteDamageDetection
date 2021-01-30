@@ -9,11 +9,9 @@ import subprocess
 
 import click
 from dotenv import load_dotenv
-from ..models.yolov3.detect import detect
-# from yolov3.train import train
 
-from object_detection import inference, train
-from cli.examples import hello
+from concrete.object_detection import inference
+from concrete.cli.examples import hello
 
 load_dotenv(dotenv_path=".env")
 
@@ -39,7 +37,7 @@ def sync(ctx):
     """
     click.echo('Debug is %s' % (ctx.obj['DEBUG'] and 'on' or 'off'))
 
-    cmd = "python models/YOLOv3/detect.py --help"
+    cmd = "python yolov3/detect.py --help"
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
     out, err = p.communicate()
     click.echo(out)
@@ -56,5 +54,3 @@ def desync(ctx):
     click.echo(x)
     click.echo(os.getenv('TEST'))
     click.echo( hello() )
-    detect()
-    # train()
