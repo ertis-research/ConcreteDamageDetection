@@ -1,0 +1,3 @@
+[submodule "yolov3"]
+	path = yolov3
+	url = git@github.com:DRTorresRuiz/yolov3.git
