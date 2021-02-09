@@ -127,3 +127,16 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# NeptuneAI Files
+.neptune
+
+# Datasets
+datasets/
+
+# Model weights
+weights/
+*.pt
+
+# Runs
+runs/
