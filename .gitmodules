@@ -7,3 +7,6 @@
 [submodule "review_object_detection_metrics"]
 	path = review_object_detection_metrics
 	url = https://github.com/DRTorresRuiz/review_object_detection_metrics.git
+[submodule "DIS-YOLO"]
+	path = DIS-YOLO
+	url = https://github.com/DRTorresRuiz/DIS-YOLO.git
