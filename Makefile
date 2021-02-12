@@ -9,6 +9,9 @@ HONGKONG_HIGHWAYS_DEPARTMENT_DIRECTORY = datasets/HONGKONG_HIGHWAYS_DEPARTMENT
 ORIGINAL_HONGKONG_HIGHWAYS_DEPARTMENT = gdown --id 1-g77ciKmHNIK_YD0z8puECtEirsOg01Z --output
 
 start:
+	# Load submodules
+	git submodule update --init
+	# Install dependencies
 	pip install -r requirements.txt -r yolov3/requirements.txt -r yolov5/requirements.txt
 
 download:

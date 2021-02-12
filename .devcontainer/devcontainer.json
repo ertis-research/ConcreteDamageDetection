@@ -47,5 +47,5 @@
 	// "remoteUser": "vscode",
 
 	// Docker CLI arguments that are used when running the container.
-	"runArgs": [ "--gpus=all", "--add-host=local_host:192.168.1.42", "--add-host=local:192.168.1.42", "--shm-size=2000000000" ]
+	"runArgs": [ "--gpus=all", "--shm-size=2000000000" ]
 }

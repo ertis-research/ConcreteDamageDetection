@@ -2,7 +2,7 @@
 FROM python:3.9.1-buster
 
 RUN apt update
-RUN apt install ffmpeg libsm6 libxext6 fastjar -y
+RUN apt install ffmpeg libsm6 libxext6 fastjar build-essential -y
 
 RUN cd /tmp && wget https://www.rarlab.com/rar/rarlinux-x64-5.6.0.tar.gz \
     && tar -zxvf rarlinux-x64-5.6.0.tar.gz && cd rar \
