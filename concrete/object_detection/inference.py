@@ -2,7 +2,7 @@
     Inference
 """
 print( __package__ )
-from cli.examples import hello
+from concrete.cli.examples import hello
 
 def inference() -> int:
     """

@@ -1,8 +1,8 @@
 """
     Basic Tests
 """
-from cli import examples
-from object_detection import inference
+from concrete.cli import examples
+from concrete.object_detection import inference
 
 def test_1():
     """
