@@ -15,12 +15,18 @@ start:
 	pip install -r requirements.txt -r yolov3/requirements.txt -r yolov5/requirements.txt
 
 download:
+	$(MAKE) download_hongkong
+	$(MAKE) download_codebrim
+
+download_hongkong:
 	mkdir -p $(HONGKONG_HIGHWAYS_DEPARTMENT_DIRECTORY)
 	if ! [ -f $(HONGKONG_HIGHWAYS_DEPARTMENT_DIRECTORY)/dataset.rar ]; then $(ORIGINAL_HONGKONG_HIGHWAYS_DEPARTMENT) $(HONGKONG_HIGHWAYS_DEPARTMENT_DIRECTORY)/dataset.rar; fi
 	cd $(HONGKONG_HIGHWAYS_DEPARTMENT_DIRECTORY); unrar x dataset.rar; cd -
+
+download_codebrim:
 	mkdir -p $(CODEBRIM_DIRECTORY)
 	if ! [ -f $(CODEBRIM_DIRECTORY)/CODEBRIM_original_images.zip ]; then curl -o $(CODEBRIM_DIRECTORY)/CODEBRIM_original_images.zip $(ORIGINAL_CODEBRIM_DATASET); fi
-	cd $(CODEBRIM_DIRECTORY); jar -xvf CODEBRIM_original_images.zip; cd -
+	cd $(CODEBRIM_DIRECTORY); jar -xvf CODEBRIM_original_images.zip; rm -dfr __MACOSX; cd -
 
 build:
 	python setup.py sdist
