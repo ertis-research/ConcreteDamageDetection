@@ -20,4 +20,6 @@ Install `make`, `python`, `pip`. And `gdown` and `unrar` if you wanna use the da
 make start 
 # Datasets and Weights, if not using Docker Image
 make download # it also unzip files
+
+concrete prepare # creates groundtruth files (for codebrim at the moment)
 ```
