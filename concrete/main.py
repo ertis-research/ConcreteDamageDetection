@@ -12,6 +12,7 @@ from dotenv import load_dotenv
 
 from concrete.object_detection import inference
 from concrete.cli.examples import hello
+from concrete.cli.utils import prepare_codebrim_yolo
 
 import torch
 import numpy as np
@@ -34,6 +35,25 @@ def cli(ctx, debug):
 
     ctx.obj['DEBUG'] = debug
 
+@cli.command()
+@click.pass_context
+def prepare(ctx):
+    """
+        Obtain groundtruth
+    """
+    path_codebrim_images = "datasets/CODEBRIM/original_dataset/images"
+    path_codebrim_annotations = "datasets/CODEBRIM/original_dataset/annotations"
+    output = "datasets/CODEBRIM/original_dataset/groundtruth_files"
+
+    error_message = "{} Dataset path does not exist: {}"
+    if not os.path.exists(path_codebrim_images):
+        print(error_message.format("CODEBRIM", path_codebrim_images))
+    elif not os.path.exists(path_codebrim_annotations):
+        print(error_message.format("CODEBRIM", path_codebrim_annotations))
+    else:
+        if not os.path.exists(output):
+            os.makedirs(output)
+        prepare_codebrim_yolo( path_codebrim_images, path_codebrim_annotations, output )
 
 @cli.command()
 @click.pass_context
