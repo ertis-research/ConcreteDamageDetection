@@ -4,9 +4,9 @@
 [submodule "yolov5"]
 	path = yolov5
 	url = https://github.com/DRTorresRuiz/yolov5
-[submodule "review_object_detection_metrics"]
-	path = review_object_detection_metrics
-	url = https://github.com/DRTorresRuiz/review_object_detection_metrics.git
 [submodule "DIS-YOLO"]
 	path = DIS-YOLO
 	url = https://github.com/DRTorresRuiz/DIS-YOLO.git
+[submodule "Object-Detection-Metrics"]
+	path = Object-Detection-Metrics
+	url = https://github.com/rafaelpadilla/Object-Detection-Metrics.git
