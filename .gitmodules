@@ -10,6 +10,3 @@
 [submodule "Object-Detection-Metrics"]
 	path = Object-Detection-Metrics
 	url = https://github.com/rafaelpadilla/Object-Detection-Metrics.git
-[submodule "yolov4"]
-	path = yolov4
-	url = https://github.com/WongKinYiu/PyTorch_YOLOv4
