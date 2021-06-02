@@ -1,9 +1,9 @@
 """
-    Hola
+    Example function
 """
 
 def hello():
     """
-        Hola
+        Example function
     """
     return "Hello"

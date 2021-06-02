@@ -1,0 +1,7 @@
+train: ../datasets/3-fold-CODEBRIM-10/3/images/train/
+val: ../datasets/3-fold-CODEBRIM-10/3/images/val/
+test: ../datasets/3-fold-CODEBRIM-10/3/images/test/
+
+nc: 5
+
+names: [ 'CRACK', 'SPALLATION', 'EFFLORESCENCE', 'EXPOSED_BARS', 'CORROSION_STAIN' ]

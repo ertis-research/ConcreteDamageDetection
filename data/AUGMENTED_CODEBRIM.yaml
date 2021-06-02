@@ -1,0 +1,7 @@
+train: ../datasets/CODEBRIM-DATA-AUGMENTED/images/train/
+val: ../datasets/CODEBRIM-DATA-AUGMENTED/images/val/
+test: ../datasets/CODEBRIM-DATA-AUGMENTED/images/test/
+
+nc: 5
+
+names: [ 'CRACK', 'SPALLATION', 'EFFLORESCENCE', 'EXPOSED_BARS', 'CORROSION_STAIN' ]
