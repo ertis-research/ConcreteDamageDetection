@@ -2,7 +2,7 @@
 
 > Thesis for the Master's degree in Computer Science - University of Malaga.
 >
-> Educational purposes only.
+> **!!** This work and its related code can be used for educational purposes only.
 
 The industrial sector has focused on monitoring structural health in order to anticipate and avoid high costs.
 There are different ways of monitoring, such as monitoring based on computer vision.
